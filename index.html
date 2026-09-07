@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suraj Chadha — Data Analyst | AI/ML &amp; Python Developer</title>
+<meta name="description" content="Suraj Chadha — Data Analyst and AI/ML & Python Developer in Mohali, Punjab. 1.5 years of experience in Python, SQL, Power BI, Tableau and applied machine learning.">
+<meta name="author" content="Suraj Chadha">
+<meta property="og:title" content="Suraj Chadha — Data Analyst | AI/ML & Python Developer">
+<meta property="og:description" content="Python, SQL, Power BI, Tableau and applied AI/ML. Based in Mohali, Punjab.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23E4572E'/><text x='50' y='72' font-size='58' font-family='Georgia,serif' font-weight='bold' fill='%23FDF3E3' text-anchor='middle'>S</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   PALETTE — white paper, black ink
+   ============================================================ */
+:root{
+  --paper:      #FFFFFF;
+  --paper-2:    #F7F7F7;
+  --paper-3:    #EDEDED;
+  --ink:        #111111;
+  --ink-soft:   #5A5A5A;
+  --ink-strong:       #111111;
+  --black:  #000000;
+  --grey:      #8A8A8A;
+  --line:       #E3E3E3;
+  --shadow:     0 10px 28px -16px rgba(0, 0, 0, .20);
+  --radius:     10px;
+  --measure:    68ch;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth; scroll-padding-top:5.5rem}
+
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:"Karla", system-ui, -apple-system, sans-serif;
+  font-size:1.02rem;
+  line-height:1.7;
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+.wrap{width:min(1060px, 90vw); margin-inline:auto}
+
+a{color:var(--ink-strong); text-decoration:none}
+a:hover{color:var(--grey); text-decoration:underline; text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--ink-strong); outline-offset:3px; border-radius:4px}
+
+/* subtle sheen on the two display headings, a quiet grey sweep */
+.shine{
+  background-image:linear-gradient(100deg,
+    var(--black) 0%, var(--ink-strong) 30%, var(--grey) 50%, var(--ink-strong) 70%, var(--black) 100%);
+  background-size:260% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:sweep 9s linear infinite;
+}
+@keyframes sweep{
+  0%{background-position:0% 50%}
+  100%{background-position:260% 50%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .shine{animation:none; background-position:20% 50%}
+  *{transition:none !important}
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:.85rem 0;
+}
+.brand{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:1.05rem; letter-spacing:-.01em; color:var(--ink);
+}
+.brand:hover{text-decoration:none; color:var(--ink-strong)}
+.topbar nav{display:flex; flex-wrap:wrap; gap:.35rem}
+.topbar nav a{
+  font-size:.88rem; font-weight:600; color:var(--ink-soft);
+  padding:.35rem .7rem; border-radius:6px;
+}
+.topbar nav a:hover{background:var(--paper-2); color:var(--ink-strong); text-decoration:none}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:4.5rem 0 3.5rem;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.hero .wrap{position:relative; z-index:2}
+
+.monogram{
+  width:88px; height:88px; margin:0 auto 1.6rem;
+  display:grid; place-items:center;
+  border-radius:12px;
+  background:linear-gradient(150deg, var(--ink-strong) 0%, var(--black) 100%);
+  color:#fff;
+  font-family:"Syne", sans-serif; font-weight:800; font-size:2.1rem; letter-spacing:-.03em;
+  box-shadow:var(--shadow);
+}
+
+.hero h1{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:clamp(2.5rem, 8vw, 5rem);
+  line-height:1;
+  letter-spacing:-.035em;
+  margin:0 0 .9rem;
+}
+.role{
+  font-size:clamp(1rem, 2.4vw, 1.25rem);
+  font-weight:600; color:var(--ink-strong);
+  margin:0 0 .5rem;
+}
+.exp-badge{
+  display:inline-block;
+  font-size:.85rem; font-weight:600;
+  color:var(--ink-soft);
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:.3rem .95rem;
+  margin-bottom:1.5rem;
+}
+
+.contact-row{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem;
+  margin-bottom:2rem;
+}
+.chip{
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-size:.9rem; font-weight:600;
+  padding:.5rem 1rem;
+  border-radius:6px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--ink);
+  transition:border-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.chip:hover{
+  border-color:var(--ink-strong); color:var(--ink-strong);
+  text-decoration:none; box-shadow:var(--shadow);
+}
+.chip.solid{
+  background:var(--ink-strong);
+  color:#fff; border-color:var(--ink-strong);
+}
+.chip.solid:hover{background:var(--black); color:#fff; border-color:var(--black)}
+
+.summary{
+  max-width:var(--measure); margin:0 auto;
+  font-size:1.06rem; color:var(--ink-soft);
+}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{padding:3.5rem 0}
+.section-head{
+  display:flex; align-items:center; gap:1rem;
+  margin-bottom:2rem;
+}
+.section-head h2{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:clamp(1.4rem, 4vw, 1.95rem);
+  letter-spacing:-.03em; margin:0; white-space:nowrap;
+}
+.section-head .bar{
+  flex:1; height:1px;
+  background:var(--line);
+}
+
+/* card */
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:1.6rem 1.7rem;
+  margin-bottom:1.25rem;
+  position:relative;
+  overflow:hidden;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.card::before{
+  content:"";
+  position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:var(--ink-strong);
+}
+.card:hover{border-color:#BFBFBF; box-shadow:var(--shadow)}
+
+.card-top{
+  display:flex; flex-wrap:wrap; align-items:baseline;
+  justify-content:space-between; gap:.3rem 1rem;
+  margin-bottom:.2rem;
+}
+.card h3{
+  font-family:"Syne", sans-serif; font-weight:700;
+  font-size:1.15rem; letter-spacing:-.02em; margin:0;
+}
+.org{font-weight:600; color:var(--ink-strong); margin:0 0 .1rem}
+.when{
+  font-size:.85rem; font-weight:600; color:var(--ink-soft);
+  background:var(--paper-2); border:1px solid var(--line);
+  border-radius:5px; padding:.15rem .6rem;
+  white-space:nowrap;
+}
+.place{font-size:.85rem; color:var(--ink-soft); margin:0 0 .8rem}
+
+.card ul{margin:.6rem 0 0; padding-left:0; list-style:none}
+.card ul li{
+  position:relative; padding-left:1.35rem; margin-bottom:.55rem;
+  max-width:var(--measure);
+}
+.card ul li::before{
+  content:"";
+  position:absolute; left:.2rem; top:.75rem;
+  width:5px; height:5px; border-radius:50%;
+  background:var(--grey);
+}
+
+/* tech tags */
+.tags{display:flex; flex-wrap:wrap; gap:.4rem; margin:.7rem 0 .2rem}
+.tags span{
+  font-size:.78rem; font-weight:600;
+  color:var(--ink-strong);
+  background:var(--paper-3);
+  border-radius:4px; padding:.2rem .6rem;
+}
+
+/* two-column grids */
+.grid-2{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.25rem}
+.grid-2 .card{margin-bottom:0}
+
+/* skills */
+.skill-cloud{display:flex; flex-wrap:wrap; gap:.55rem}
+.skill-cloud span{
+  font-weight:600; font-size:.92rem;
+  padding:.45rem 1rem;
+  border-radius:6px;
+  border:1px solid var(--line);
+  background:var(--paper-2);
+  transition:border-color .18s ease, color .18s ease;
+}
+.skill-cloud span:hover{border-color:var(--ink-strong); color:var(--ink-strong)}
+
+/* plain lists (courses, certificates, achievements) */
+.plain{margin:0; padding-left:0; list-style:none}
+.plain li{
+  position:relative; padding:.55rem 0 .55rem 1.35rem;
+  border-bottom:1px solid var(--line);
+}
+.plain li:last-child{border-bottom:0}
+.plain li::before{
+  content:"";
+  position:absolute; left:.2rem; top:1.1rem;
+  width:5px; height:5px; border-radius:50%;
+  background:var(--grey);
+}
+.plain .sub{display:block; font-size:.85rem; color:var(--ink-soft)}
+
+/* inline pill list for languages / interests */
+.pill-row{display:flex; flex-wrap:wrap; gap:.55rem; margin-top:.9rem}
+.pill-row span{
+  font-weight:600; font-size:.92rem;
+  padding:.45rem 1rem;
+  border-radius:6px;
+  border:1px solid var(--line);
+  background:var(--paper-2);
+}
+
+/* contact section */
+.closing{
+  text-align:center;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:var(--paper-2);
+  padding:3rem 1.5rem;
+  position:relative; overflow:hidden;
+}
+.closing h2{
+  font-family:"Syne", sans-serif; font-weight:800;
+  font-size:clamp(1.6rem, 5vw, 2.4rem); letter-spacing:-.03em;
+  margin:0 0 .6rem;
+}
+.closing p{max-width:46ch; margin:0 auto 1.75rem; color:var(--ink-soft)}
+.closing .chip{background:#fff}
+
+footer{
+  padding:2.5rem 0 3rem; text-align:center;
+  font-size:.85rem; color:var(--ink-soft);
+  border-top:1px solid var(--line);
+}
+
+@media (max-width:640px){
+  section{padding:2.5rem 0}
+  .hero{padding:3rem 0 2.5rem}
+  .card{padding:1.3rem 1.2rem}
+  .when{white-space:normal}
+}
+
+@media print{
+  .topbar, .chip.solid{display:none}
+  body{background:#fff; color:#000}
+  .shine{color:#000; background:none; -webkit-text-fill-color:#000}
+  .card{break-inside:avoid; box-shadow:none}
+}
+
+/* ============================================================
+   ASK / MESSAGE FORM
+   ============================================================ */
+.form-card{max-width:760px; margin-inline:auto}
+.field{margin-bottom:1.1rem}
+.field label{
+  display:block; font-weight:600; font-size:.9rem;
+  margin-bottom:.35rem; color:var(--ink);
+}
+.field input, .field textarea{
+  width:100%;
+  font-family:inherit; font-size:1rem; color:var(--ink);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:.7rem .85rem;
+  transition:border-color .18s ease, box-shadow .18s ease;
+}
+.field input:focus, .field textarea:focus{
+  outline:none;
+  border-color:var(--ink-strong);
+  box-shadow:0 0 0 3px rgba(0,0,0,.07);
+}
+.field textarea{min-height:150px; resize:vertical; line-height:1.6}
+.field-row{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.1rem}
+.hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+
+.send-btn{
+  font-family:inherit; font-size:.95rem; font-weight:700;
+  color:#fff; background:var(--black);
+  border:1px solid var(--black); border-radius:6px;
+  padding:.7rem 1.6rem; cursor:pointer;
+  transition:opacity .18s ease, transform .18s ease;
+}
+.send-btn:hover{opacity:.85}
+.send-btn:disabled{opacity:.45; cursor:not-allowed}
+.send-btn:focus-visible{outline:2px solid var(--ink-strong); outline-offset:3px}
+
+.form-note{font-size:.85rem; color:var(--ink-soft); margin:.9rem 0 0}
+.status{
+  margin:1rem 0 0; padding:.75rem 1rem;
+  border-radius:6px; font-size:.92rem; font-weight:600;
+  border:1px solid var(--line); background:var(--paper-2);
+}
+.status[hidden]{display:none}
+.status.ok{border-color:#111; }
+.status.err{border-color:#111; background:#EDEDED}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Suraj Chadha</a>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#internships">Internships</a>
+      <a href="#projects">Projects</a>
+      <a href="#links">Links</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#more">Certificates</a>
+      <a href="#ask">Ask</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+
+  <div class="wrap">
+    <div class="monogram">SC</div>
+
+    <h1 class="shine">Suraj Chadha</h1>
+
+    <p class="role">Data Analyst / Manager &nbsp;|&nbsp; AI/ML &amp; Python Developer</p>
+    <p class="exp-badge">1.5 years of experience &middot; Mohali, Punjab</p>
+
+    <div class="contact-row">
+      <a class="chip solid" href="mailto:surajchadhamba@gmail.com">✉ surajchadhamba@gmail.com</a>
+      <a class="chip" href="tel:+918091096367">☎ 8091096367</a>
+      <a class="chip" href="https://linkedin.com/in/suraj-chadha-40b34a19b" target="_blank" rel="noopener">in&nbsp;LinkedIn</a>
+      <a class="chip" href="https://github.com/SurajChadha001" target="_blank" rel="noopener">◈ GitHub</a>
+      <a class="chip" href="https://leetcode.com/u/surajchadhamca/" target="_blank" rel="noopener">◧ LeetCode</a>
+      <a class="chip" href="Suraj_Chadha.pdf" download="Suraj_Chadha.pdf">⤓ Resume</a>
+    </div>
+
+    <p class="summary">
+      IT professional with experience in diverse projects, demonstrating adaptability and teamwork
+      in fast-paced environments. Skilled in data analysis, Python, and machine learning, which has
+      equipped me to tackle complex challenges effectively. I thrive under pressure and consistently
+      meet strict deadlines while also taking initiative when needed. My enthusiasm and dedication
+      contribute to successful project outcomes and a collaborative team atmosphere.
+    </p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Work experience</h2><span class="bar"></span>
+    </div>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Junior AI Developer</h3>
+        <span class="when">Dec 2025 – Apr 2026</span>
+      </div>
+      <p class="org">Aiinfox Private Limited</p>
+      <p class="place">Mohali</p>
+      <ul>
+        <li>Served as an AI/ML Developer, proficiently handling employee data management in Excel while seamlessly integrating backend services with Python, Next.js, and LangChain. Achieved a 98% accuracy improvement in application features, resulting in the successful conversion of 60–80% of targeted leads into clients for a UK-based organization.</li>
+        <li>Created and managed product listings on the Fashion4U website, achieving 90% accuracy and enhancing website efficiency by 88% for improved e-commerce performance.</li>
+        <li>Executed SEO strategies for an online interview process website, realizing a 90% accuracy in optimization efforts.</li>
+        <li>Designed and resolved issues on the company's official website, achieving a 60% success rate in bug resolution.</li>
+        <li>Executed product CRUD operations, managing the delivery of 80% high-quality results on a food delivery application.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Python Developer</h3>
+        <span class="when">Feb 2025 – Jul 2025</span>
+      </div>
+      <p class="org">Baseline IT Development</p>
+      <p class="place">Mohali</p>
+      <ul>
+        <li>Implemented SQL queries and improved data flow processes, resulting in a significant reduction in ticket resolution time from 24 hours to just 6 hours by establishing a priority triage system.</li>
+        <li>Played a key role in the operational tasks of a Django Flask application, achieving a 90% satisfaction rate among Australian clients.</li>
+        <li>Involved in automating workflows with tools like Make.com and Monday.com, and executed tasks in the Odoo framework, focusing on token generation for the online gaming sector.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Web Developer</h3>
+        <span class="when">Jul 2024 – Feb 2025</span>
+      </div>
+      <p class="org">Dream BIG Edtech Private Limited</p>
+      <p class="place">Mohali</p>
+      <ul>
+        <li>Conducted product analytics, web tracking, and A/B test analysis using PHP and Laravel to optimize course distribution with 95% efficiency.</li>
+        <li>Integrated web analytics using Python Flask and Google Analytics tools to track user behaviour and ensure high client satisfaction.</li>
+        <li>Drove stakeholder management and cross-functional communication through performance metrics and A/B test analysis to support business alignment.</li>
+        <li>Partnered with the product team to identify and address recurring issues, achieving a 15% reduction in customer complaints.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ================= INTERNSHIPS ================= -->
+<section id="internships">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Internships</h2><span class="bar"></span>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <div class="card-top">
+          <h3>Python Trainee (45 days) &amp; AI/ML Trainee (45 days)</h3>
+          <span class="when">Aug 2025 – Nov 2025</span>
+        </div>
+        <p class="org">TOXSL Technologies</p>
+        <p class="place">Mohali, Punjab</p>
+        <ul>
+          <li>Utilized AI/ML algorithms and statistical analysis in Python.</li>
+          <li>Achieved 90% accuracy in data classification tasks.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>MERN Stack Trainee</h3>
+          <span class="when">Sep 2024 – Feb 2025</span>
+        </div>
+        <p class="org">A2 IT Solutions</p>
+        <p class="place">Mohali, Punjab</p>
+        <ul>
+          <li>Completed React and MongoDB dynamic integration projects.</li>
+          <li>Achieved efficient server-side rendering and database connectivity.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>AI/ML and Power BI Trainee</h3>
+          <span class="when">Jan 2024 – Jul 2024</span>
+        </div>
+        <p class="org">ThinkNEXT Technologies</p>
+        <p class="place">Mohali, Punjab</p>
+        <ul>
+          <li>Created interactive Power BI dashboards.</li>
+          <li>Conducted Tableau research for university data analytics projects.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Projects</h2><span class="bar"></span>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <h3>Web Form Flask Live Project (US-based client)</h3>
+        <p class="org">Baseline IT Development &middot; Python/Flask Developer</p>
+        <div class="tags"><span>Flask</span><span>MySQL</span><span>SQLAlchemy</span></div>
+        <ul>
+          <li>Built interactive web forms with Flask.</li>
+        </ul>
+        <p><a href="https://github.com/SurajChadha001/flask-web-form" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Tourism Management System using Django</h3>
+        <p class="org">Baseline IT Development &middot; Python Developer</p>
+        <div class="tags"><span>Django</span><span>Flask</span></div>
+        <ul>
+          <li>Created an effective booking platform using Django/Flask.</li>
+        </ul>
+        <p><a href="https://github.com/SurajChadha001/tourism-management-system" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Sales Analytics Dashboards in Tableau &amp; Power BI</h3>
+        <p class="org">ThinkNEXT Technologies &middot; Data Science Trainee</p>
+        <div class="tags"><span>Tableau Public</span><span>Power BI</span><span>Data visualization</span></div>
+        <ul>
+          <li>Implemented analytics dashboards for strategic insights.</li>
+        </ul>
+        <p><a href="https://github.com/SurajChadha001/Tableau_Projects" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LINKS ================= -->
+<section id="links">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Links &amp; documents</h2><span class="bar"></span>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <h3>LeetCode</h3>
+        <p class="org">surajchadhamca</p>
+        <p>Problem solving practice in Python — data structures, algorithms and SQL.</p>
+        <p><a href="https://leetcode.com/u/surajchadhamca/" target="_blank" rel="noopener">Open profile</a></p>
+      </article>
+
+      <!-- EDIT: rename this card to match what is actually inside the folder -->
+      <article class="card">
+        <h3>Certificates &amp; documents</h3>
+        <p class="org">Google Drive folder</p>
+        <p>Course completions, training certificates and supporting documents.</p>
+        <p><a href="https://drive.google.com/drive/folders/1w8s_AxZrOJcCWstRSF958PtL63xBCsJB" target="_blank" rel="noopener">Open folder</a></p>
+      </article>
+
+      <!-- EDIT: rename this card to match what is actually inside the folder -->
+      <article class="card">
+        <h3>Project files &amp; work samples</h3>
+        <p class="org">Google Drive folder</p>
+        <p>Dashboards, reports and project material shared as files.</p>
+        <p><a href="https://drive.google.com/drive/folders/1cJdOFMTbljnQCFgsxdHCHnphtl2XXB6j" target="_blank" rel="noopener">Open folder</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Skills</h2><span class="bar"></span>
+    </div>
+    <div class="skill-cloud">
+      <span>Python</span><span>Excel</span><span>Statistics</span><span>Data visualization</span>
+      <span>Business problem solving</span><span>SQL</span><span>PostgreSQL</span><span>PHP</span>
+      <span>Laravel</span><span>Python Flask</span><span>Google Analytics</span><span>AI/ML</span>
+      <span>Power BI</span><span>Tableau</span><span>React</span><span>MongoDB</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Education</h2><span class="bar"></span>
+    </div>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>MBA in Data Science &amp; AI</h3>
+        <span class="when">Jan 2026 – Present</span>
+      </div>
+      <p class="org">Chitkara University (in partnership with EY)</p>
+      <p class="place">Chandigarh</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Master of Computer Applications</h3>
+        <span class="when">Aug 2022 – Aug 2024</span>
+      </div>
+      <p class="org">Chitkara University</p>
+      <p class="place">Chandigarh</p>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <h3>Bachelor of Computer Applications</h3>
+        <span class="when">Jul 2019 – Aug 2022</span>
+      </div>
+      <p class="org">Chitkara University</p>
+      <p class="place">Chandigarh</p>
+    </article>
+  </div>
+</section>
+
+<!-- ================= COURSES / CERTIFICATES / MORE ================= -->
+<section id="more">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Courses &amp; certificates</h2><span class="bar"></span>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <h3>Courses</h3>
+        <ul class="plain">
+          <li>EY (Artificial Intelligence and Machine Learning)<span class="sub">EY | Chitkara University</span></li>
+          <li>Harvard Business Publishing<span class="sub">Chitkara University / DS &amp; AI / Harvard University</span></li>
+          <li>Amazon Web Services Course<span class="sub">Udemy</span></li>
+          <li>Data Structures and Algorithms using Python<span class="sub">Udemy</span></li>
+          <li>Digital Marketing Course<span class="sub">Udemy</span></li>
+          <li>Machine Learning Course<span class="sub">Coursera — University of Illinois</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Certificates</h3>
+        <ul class="plain">
+          <li>Harvard Business Publishing (2026–2027)<span class="sub">Harvard | Chitkara University</span></li>
+          <li>Coursera Certified (2026–2027)<span class="sub">Coursera | Chitkara University</span></li>
+          <li>LinkedIn Learning (2026–2027)<span class="sub">LinkedIn Learning | Chitkara University</span></li>
+          <li>HCL GUVI (2026)<span class="sub">HCL | GUVI Platform</span></li>
+          <li>Coding Ninjas (2024–2025)<span class="sub">Coding Ninjas Winter Training Program</span></li>
+          <li>Toastmasters International (2020–2024)<span class="sub">Toastmasters | Chitkara University</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Achievements</h3>
+        <ul class="plain">
+          <li>Achieved the top rank in the Debate competition organized by ThinkNEXT Technologies.</li>
+          <li>Honored Best Role Bearer and Best Evaluator by Toastmasters International.</li>
+          <li>Listed in the top 10% charts in the annual newsletter, Department of Computer Applications, Chitkara University.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Languages</h3>
+        <div class="pill-row">
+          <span>English</span>
+          <span>Hindi</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Interests</h3>
+        <div class="pill-row">
+          <span>Travelling</span>
+          <span>Playing music</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ASK A QUESTION (saves to Supabase) ================= -->
+<section id="ask">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ask me a question</h2><span class="bar"></span>
+    </div>
+
+    <div class="card form-card">
+      <p style="margin-top:0">
+        Send a role, a question about my work, or anything else. It lands in my inbox database
+        and I reply on the email you leave below.
+      </p>
+
+      <form id="ask-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" maxlength="100" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" maxlength="150" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-company">Company or college <span style="font-weight:400; color:var(--ink-soft)">(optional)</span></label>
+          <input id="f-company" name="company" type="text" maxlength="120" autocomplete="organization">
+        </div>
+
+        <div class="field">
+          <label for="f-message">Your question</label>
+          <textarea id="f-message" name="message" maxlength="2000" required></textarea>
+        </div>
+
+        <!-- honeypot: real people never see this, bots fill it in -->
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Leave this empty</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button class="send-btn" id="send-btn" type="submit">Send message</button>
+        <p class="status" id="form-status" role="status" hidden></p>
+        <p class="form-note">Your details are stored securely and are never shared.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="closing">
+      <h2 class="shine">Let's work together</h2>
+      <p>Open to Data Analyst, Business Analyst, Python and AI/ML roles. Send me the job description and I'll get back to you.</p>
+      <div class="contact-row" style="margin-bottom:0">
+        <a class="chip solid" href="mailto:surajchadhamba@gmail.com">✉ surajchadhamba@gmail.com</a>
+        <a class="chip" href="tel:+918091096367">☎ 8091096367</a>
+        <a class="chip" href="https://linkedin.com/in/suraj-chadha-40b34a19b" target="_blank" rel="noopener">in&nbsp;LinkedIn</a>
+        <a class="chip" href="https://github.com/SurajChadha001" target="_blank" rel="noopener">◈ GitHub</a>
+        <a class="chip" href="https://leetcode.com/u/surajchadhamca/" target="_blank" rel="noopener">◧ LeetCode</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Suraj Chadha &middot; Mohali, Punjab, India</div>
+</footer>
+
+
+<!-- ============================================================
+     SUPABASE — saves each message into your database
+     EDIT the two lines marked below with your own project values
+     ============================================================ -->
+<script type="module">
+  import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+  // EDIT 1 — your Project URL from Supabase > Settings > API
+  const SUPABASE_URL      = "https://dxcrjjyypyrykilkcfxo.supabase.co";
+  // EDIT 2 — your "anon public" key from the same page (safe to publish)
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4Y3Jqanl5cHlyeWtpbGtjZnhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3NjM5MTIsImV4cCI6MjEwNDMzOTkxMn0.3rJRLJd4ITuEjOlwhr2er9NL2ZXHkb2r5lsUVDVG8EU";
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const form   = document.getElementById("ask-form");
+  const btn    = document.getElementById("send-btn");
+  const status = document.getElementById("form-status");
+
+  function show(text, kind) {
+    status.textContent = text;
+    status.className = "status " + kind;
+    status.hidden = false;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name    = form.name.value.trim();
+    const email   = form.email.value.trim();
+    const company = form.company.value.trim();
+    const message = form.message.value.trim();
+    const trap    = form.website.value;
+
+    if (trap) return;                       // bot filled the honeypot, quietly ignore
+    if (!name || !email || !message) {
+      return show("Please fill in your name, email and question.", "err");
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return show("That email address does not look right.", "err");
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+
+    const { error } = await supabase
+      .from("messages")
+      .insert([{ name, email, company: company || null, message }]);
+
+    btn.disabled = false;
+    btn.textContent = "Send message";
+
+    if (error) {
+      console.error(error);
+      show("Something went wrong. Please email me directly at surajchadhamba@gmail.com", "err");
+    } else {
+      form.reset();
+      show("Thank you. Your message has been received — I will reply soon.", "ok");
+    }
+  });
+</script>
+
+</body>
+</html>
